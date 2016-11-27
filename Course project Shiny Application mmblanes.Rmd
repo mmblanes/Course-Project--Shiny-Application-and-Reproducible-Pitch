@@ -11,7 +11,7 @@ Data, source code for ui.R and server.R files are available on the GitHub repo: 
 
 This is my work for the course Developing Data Products.
 
-The app is avalilable at: 
+The app is avalilable at: https://mmblanes.shinyapps.io/EjmploDeShiny/
 
 ## Funcionality
 The app provide a tool for to analisys the request of narcotics drug at Spain (at last 6 months).
@@ -20,11 +20,11 @@ First, you must choose the variable of interest:Generados (requested), Entregado
 
 Second, you can choose your the correspodient tab to show the plot or the summary.
 
-## Plot 
+## Plot
 ```{r, message=FALSE}
 setwd("~/EjmploDeShiny")
-datos<-read.csv(file="indicadores_estupe.csv",head=TRUE,sep=";")
-hist(datos$Total.Vales, main=paste('Variable: Generados ', sep=''))
+datos<-read.csv(file="estupe.csv",head=TRUE,sep=";")
+hist(datos$TotalVales, main=paste('Variable: Generados ', sep=''))
 ```
 
 ## Dataset
