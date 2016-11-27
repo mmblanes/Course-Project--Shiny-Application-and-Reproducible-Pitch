@@ -1,6 +1,6 @@
 #library(shiny)
 
-# Define UI for random distribution application 
+# Define UI for create the tool
 shinyUI(pageWithSidebar(
   
   # Application title

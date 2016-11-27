@@ -3,8 +3,9 @@ library(shiny)
 
 shinyServer(function(input, output) {
   
-  
+ # Load the data.
  datos<-read.csv(file="indicadores_estupe.csv",head=TRUE,sep=";")
+ # Create a reactive data with tree posibilities
  data <- reactive({  
    xvar <- switch(input$vari,
                   Solicitados = datos$Total.Vales,
