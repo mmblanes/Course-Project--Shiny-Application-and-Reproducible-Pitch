@@ -4,14 +4,14 @@ library(shiny)
 shinyServer(function(input, output) {
   
  # Load the data.
- datos<-read.csv(file="indicadores_estupe.csv",head=TRUE,sep=";")
+ datos<-read.csv(file="estupe.csv",head=TRUE,sep=";")
  # Create a reactive data with tree posibilities
  data <- reactive({  
    xvar <- switch(input$vari,
-                  Solicitados = datos$Total.Vales,
-                  Entregados = datos$Total.Entregados,
-                  Cancelados = datos$Total.Cancelados,
-                  datos$Total.Cancelados)
+                  Solicitados = datos$TotalVales,
+                  Entregados = datos$TotalEntregados,
+                  Cancelados = datos$TotalCancelados,
+                  datos$TotalCancelados)
  })
   # Generate a plot of the data.
   output$plot <- renderPlot({
